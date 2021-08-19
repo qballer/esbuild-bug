@@ -3,7 +3,7 @@ const { build } = require('esbuild');
 
 const generateBuild = async () => {
   await build({
-    entryPoints: ['./src/index.tsx'],
+    entryPoints: ['./index.tsx'],
     outfile: 'www/main.js',
     logLevel: 'info',
     minify: true,
@@ -19,7 +19,12 @@ const generateBuild = async () => {
       '.woff': 'file',
     },
     define: {
-      'process.env.NODE_ENV': '"development"'
+      'process.env.NODE_ENV': '\"development\"',
+      'process.env.REACT_APP_FLAGS_CTX_APP_NAME': '\"\"',
+      'process.env.REACT_APP_FLAGS_CTX_INSTANCE_ID': '\"\"',
+      'process.env.REACT_APP_FLAGS_CTX_HOST': '\"\"',
+      'process.env.REACT_APP_FLAGS_CTX_URL' :'\"\"',
+      'process.env.REACT_APP_FLAGS_CTX_URI':'\"\"'
     }
   }).catch(() => process.exit(1));
 

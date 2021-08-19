@@ -5,9 +5,9 @@ console.log("process.env.NODE_ENV", process.env.NODE_ENV);
 
 
 ReactDOM.render(
-  <FlagsProvider >
+//   <FlagsProvider >
     <div>Hello world</div>
-  </FlagsProvider>
+//   </FlagsProvider>
 ,
   document.getElementById("root")
 );
