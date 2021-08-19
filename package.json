@@ -1,0 +1,19 @@
+{
+  "name": "esbuild-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "esbuild": "esbuild '--define:process.env.NODE_ENV=\"production\"' --outfile=www/main.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11 --loader:.svg=dataurl --loader:.png=dataurl  --loader:.eot=file --loader:.ttf=file --platform=browser --loader:.woff=file index.tsx",
+    "serve": "python3 -m http.server 8000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.6.2",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-unleash-flags": "^1.3.0"
+  }
+}
